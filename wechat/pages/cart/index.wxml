@@ -1,0 +1,19 @@
+<block class="container" wx:if="{{something}}">
+  <image src="{{cartImg}}" class="cart-image"/>
+  <view class="tips">{{tipWords}}</view>
+</block>
+<view wx:else class="item">
+  <view>
+    <image src="{{shoppingDetails.goodspics}}"></image>
+  </view>
+  <view class="name">{{shoppingDetails.title}}</view>
+  <view class="operate">
+    <button type="warn" bindtap="cut">-</button>
+    <input type="text" value="{{num}}" bindinput="change"/>
+    <button type="warn" bindtap="add">+</button>
+  </view>
+  <view class="sum">￥{{num*shoppingDetails.ourprice}}</view>
+</view>
+ <view class="buy">
+        <button type="warn" bindtap="buySomething">结算</button>
+</view>
